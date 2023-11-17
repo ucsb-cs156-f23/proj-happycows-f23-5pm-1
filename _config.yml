@@ -23,4 +23,4 @@ repo_name: "TBD"
 repo: ucsb-cs156-f23/proj-happycows-f23-5pm-1
 owner: ucsb-cs156-f23
 repo_name: proj-happycows-f23-5pm-1
-pull_requests: []
+pull_requests: [{"author":{"id":"MDQ6VXNlcjU1NTU2Mjk2","is_bot":false,"login":"Yashasvi-Vangala","name":"Yashasvi Vangala"},"headRefName":"yv-no-purchase-toast","number":17,"title":"Removed Sold Cow Toast","url":"https://github.com/ucsb-cs156-f23/proj-happycows-f23-5pm-1/pull/17"}]
