@@ -33,7 +33,7 @@ body {
   -webkit-animation: textclip 2s linear infinite;
           animation: textclip 2s linear infinite;
   display: inline-block;
-      font-size: 60px;
+  font-size: 60px;
 }
 
 @-webkit-keyframes textclip {
@@ -48,4 +48,4 @@ body {
     }
   }
 
-/*# sourceMappingURL=main.00bafb9e.css.map*/
+/*# sourceMappingURL=main.d0d876ee.css.map*/
