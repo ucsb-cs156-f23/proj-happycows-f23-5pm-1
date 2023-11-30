@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">72.72% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>7/7</span>
+                <span class='fraction'>8/11</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>3/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">66.66% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>2/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">88.88% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>7/7</span>
+                <span class='fraction'>8/9</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -127,32 +127,26 @@
 <a name='L62'></a><a href='#L62'>62</a>
 <a name='L63'></a><a href='#L63'>63</a>
 <a name='L64'></a><a href='#L64'>64</a>
-<a name='L65'></a><a href='#L65'>65</a>
-<a name='L66'></a><a href='#L66'>66</a>
-<a name='L67'></a><a href='#L67'>67</a>
-<a name='L68'></a><a href='#L68'>68</a>
-<a name='L69'></a><a href='#L69'>69</a>
-<a name='L70'></a><a href='#L70'>70</a>
-<a name='L71'></a><a href='#L71'>71</a>
-<a name='L72'></a><a href='#L72'>72</a>
-<a name='L73'></a><a href='#L73'>73</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L65'></a><a href='#L65'>65</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">86x</span>
-<span class="cline-any cline-yes">86x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">86x</span>
+<span class="cline-any cline-yes">35x</span>
+<span class="cline-any cline-yes">35x</span>
+<span class="cline-any cline-yes">35x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">86x</span>
+<span class="cline-any cline-yes">35x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">35x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">35x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -178,20 +172,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -212,15 +196,19 @@ import { Card, Button, Row, Col } from "react-bootstrap";
 import { useCurrentUser, hasRole } from "main/utils/currentUser";
 import { useParams } from "react-router-dom";
 &nbsp;
-// add parameters
-const ManageCows = ({ userCommons, commons, onBuy, onSell }) =&gt; {
+// add parameters 
+const ManageCows = ({userCommons, commons, setMessage, openModal}) =&gt;  {
+&nbsp;
     // update cowPrice from fixture
     const { data: currentUser } = useCurrentUser();
-    const { userId } = useParams();
+    let { userId } = useParams();
+    userId = userId ? parseInt(userId, 10) : <span class="branch-1 cbranch-no" title="branch not covered" >NaN;</span>
     // Stryker disable all
-    const canView =
+    const isViewOnly =
         hasRole(currentUser, "ROLE_ADMIN") &amp;&amp;
-        userId !== currentUser.root.user.id;
+<span class="branch-1 cbranch-no" title="branch not covered" >        userId !== currentUser.root.user.id;</span>
+    !isNaN(userId);
+&nbsp;
     // Stryker restore all
     return (
         &lt;Card&gt;
@@ -237,33 +225,21 @@ const ManageCows = ({ userCommons, commons, onBuy, onSell }) =&gt; {
                     🥛 Current Milk Price: ${commons?.milkPrice}
                 &lt;/Card.Title&gt;
                 {/* when the ID doesnt match, dont show the buy/sell button */}
-                {canView ? (
-                    &lt;&gt;
-                        &lt;p&gt;
+                {isViewOnly ? (
+<span class="branch-0 cbranch-no" title="branch not covered" >                    &lt;&gt;</span>
+                        &lt;p data-testid="ManageCows-ViewOnly"&gt;
                             This page is for viewing only, cannot buy and sell
                             cows.
                         &lt;/p&gt;
                     &lt;/&gt;
                 ) : (
                     &lt;&gt;
-                        &lt;Row&gt;
+                       &lt;Row&gt;
                             &lt;Col className="text-center"&gt;
-                                &lt;Button
-                                    variant="outline-success"
-                                    onClick={() =&gt; onBuy(userCommons)}
-                                    data-testid={"buy-cow-button"}
-                                &gt;
-                                    Buy cow
-                                &lt;/Button&gt;
+                                &lt;Button variant="outline-success" onClick={()=&gt;{setMessage('buy'); <span class="cstat-no" title="statement not covered" >openModal();}</span>} data-testid={"buy-cow-button"}&gt;Buy cows&lt;/Button&gt;
                             &lt;/Col&gt;
                             &lt;Col className="text-center"&gt;
-                                &lt;Button
-                                    variant="outline-danger"
-                                    onClick={() =&gt; onSell(userCommons)}
-                                    data-testid={"sell-cow-button"}
-                                &gt;
-                                    Sell cow
-                                &lt;/Button&gt;
+                                &lt;Button variant="outline-danger" onClick={<span class="fstat-no" title="function not covered" >()</span>=&gt;{<span class="cstat-no" title="statement not covered" >setMessage('sell'); <span class="cstat-no" title="statement not covered" ></span>openModal();}</span>} data-testid={"sell-cow-button"}&gt;Sell cows&lt;/Button&gt;
                             &lt;/Col&gt;
                         &lt;/Row&gt;
                         &lt;p&gt;
@@ -286,7 +262,7 @@ export default ManageCows;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Thu Nov 30 2023 06:30:35 GMT+0000 (Coordinated Universal Time)
+                at Thu Nov 30 2023 01:43:00 GMT-0800 (Pacific Standard Time)
             </div>
         <script src="../../prettify.js"></script>
         <script>
