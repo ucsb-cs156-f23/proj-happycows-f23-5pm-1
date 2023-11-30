@@ -56,7 +56,7 @@ describe("AdminCreateCommonsPage tests", () => {
     });
 
     test("When you fill in form and click submit, the right things happens", async () => {
-        axiosMock.onPost("/api/commons/new").reply(200, {
+        axiosMock.onPost("/api/commons/defaults").reply(200, {
             "id": 5,
             "name": "My New Commons",
             "cowPrice": 10,
@@ -79,8 +79,12 @@ describe("AdminCreateCommonsPage tests", () => {
             </QueryClientProvider>
         );
 
-        expect(await screen.findByText("Create Commons")).toBeInTheDocument();
-
+        // Wait for the component to render and asynchronous operations to complete
+        await waitFor(() => {
+            // Make assertions after the component has rendered
+            expect(screen.getByText("Create Commons")).toBeInTheDocument();
+            // Add more assertions as needed
+        });
         const commonsNameField = screen.getByLabelText("Commons Name");
         const startingBalanceField = screen.getByLabelText("Starting Balance");
         const cowPriceField = screen.getByLabelText("Cow Price");

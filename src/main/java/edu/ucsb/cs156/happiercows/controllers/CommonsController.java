@@ -23,6 +23,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import edu.ucsb.cs156.happiercows.services.CommonsPlusBuilderService;
+import java.time.LocalDateTime;
 
 
 import java.util.Optional;
@@ -83,6 +84,7 @@ public class CommonsController extends ApiController {
                 .capacityPerUser(defaultCapacityPerUser)
                 .aboveCapacityHealthUpdateStrategy(CowHealthUpdateStrategies.valueOf(defaultAboveCapacityHealthUpdateStrategy))
                 .belowCapacityHealthUpdateStrategy(CowHealthUpdateStrategies.valueOf(defaultBelowCapacityHealthUpdateStrategy))
+                .startingDate(LocalDateTime.now()) // Set current date and time
                 .build();
 
         return ResponseEntity.ok().body(defaultCommons);
