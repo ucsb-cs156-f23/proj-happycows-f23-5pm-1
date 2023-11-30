@@ -46,12 +46,12 @@ import java.util.List;
 
     ) {
 
-<span class="nc" id="L49">        UserCommons userCommons = userCommonsRepository.findByCommonsIdAndUserId(commonsId, userId)</span>
-<span class="nc" id="L50">            .orElseThrow(() -&gt; new EntityNotFoundException(UserCommons.class, &quot;commonsId&quot;, commonsId, &quot;userId&quot;, userId));</span>
+<span class="fc" id="L49">        UserCommons userCommons = userCommonsRepository.findByCommonsIdAndUserId(commonsId, userId)</span>
+<span class="fc" id="L50">            .orElseThrow(() -&gt; new EntityNotFoundException(UserCommons.class, &quot;commonsId&quot;, commonsId, &quot;userId&quot;, userId));</span>
 
-<span class="nc" id="L52">        Iterable&lt;Profit&gt; profits = profitRepository.findAllByUserCommons(userCommons);</span>
+<span class="fc" id="L52">        Iterable&lt;Profit&gt; profits = profitRepository.findAllByUserCommons(userCommons);</span>
 
-<span class="nc" id="L54">        return profits;</span>
+<span class="fc" id="L54">        return profits;</span>
     }
     @Operation(summary = &quot;Get all profits belonging to a user commons as a user via CommonsID&quot;)
     @PreAuthorize(&quot;hasRole('ROLE_USER')&quot;)
