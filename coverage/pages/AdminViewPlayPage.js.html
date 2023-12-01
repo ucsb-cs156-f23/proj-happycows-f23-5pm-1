@@ -25,14 +25,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>14/14</span>
+                <span class='fraction'>17/17</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>11/11</span>
+                <span class='fraction'>13/13</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>13/13</span>
+                <span class='fraction'>16/16</span>
             </div>
         
             
@@ -202,7 +202,21 @@
 <a name='L137'></a><a href='#L137'>137</a>
 <a name='L138'></a><a href='#L138'>138</a>
 <a name='L139'></a><a href='#L139'>139</a>
-<a name='L140'></a><a href='#L140'>140</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -284,7 +298,21 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">47x</span>
+<span class="cline-any cline-yes">47x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">47x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">47x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -422,7 +450,17 @@ const AdminViewPlayPage = () =&gt; {
     const bannerStyle = {
         background: "#f0f0f0",
         padding: "10px",
+        textAlign: "center",
     };
+&nbsp;
+    const visiting_user = userCommons?.username;
+    const visiting_commons = commonsPlus?.commons.name;
+    // Stryker disable all
+    const admin_name = currentUser?.root
+        ? currentUser?.root?.user?.fullName
+        : "";
+    // Stryker restore all
+&nbsp;
     return (
         &lt;div&gt;
             &lt;BasicLayout&gt;
@@ -432,14 +470,18 @@ const AdminViewPlayPage = () =&gt; {
                 &gt;
                     &lt;Card.Body&gt;
                         &lt;Card.Title&gt;
-                            Visiting user{userId} from common{commonsId}.
+                            This is a Admin Feature for{" "}
+                            &lt;strong&gt;{admin_name}&lt;/strong&gt;
                             &lt;br /&gt;
-                            READ ONLY
+                            Visiting Farmer &lt;strong&gt;{visiting_user}&lt;/strong&gt;'s
+                            Play Page for common{" "}
+                            &lt;strong&gt;{visiting_commons}&lt;/strong&gt; in Read Only
+                            Mode.
                         &lt;/Card.Title&gt;
                     &lt;/Card.Body&gt;
                 &lt;/Card&gt;
                 &lt;Container&gt;
-                    {!!currentUser &amp;&amp; &lt;CommonsPlay currentUser={currentUser} /&gt;}
+                    {!!currentUser &amp;&amp; &lt;CommonsPlay currentUser={userCommons} /&gt;}
                     {!!commonsPlus &amp;&amp; (
                         &lt;CommonsOverview
                             commonsPlus={commonsPlus}
@@ -487,7 +529,7 @@ export default AdminViewPlayPage;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Thu Nov 30 2023 15:03:46 GMT-0800 (Pacific Standard Time)
+                at Fri Dec 01 2023 11:36:01 GMT-0800 (Pacific Standard Time)
             </div>
         <script src="../prettify.js"></script>
         <script>
